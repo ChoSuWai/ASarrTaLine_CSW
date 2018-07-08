@@ -12,6 +12,7 @@
     <!--specific colors-->
     <color name="btn_background">#FFFFFF</color>
     <color name="text_color">#FFFFFF</color>
-    </resources>
+    <color name="search_bar_color">#FFFFFF</color>
+</resources>
 
 

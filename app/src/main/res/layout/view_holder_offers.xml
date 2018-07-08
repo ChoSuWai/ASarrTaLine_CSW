@@ -53,14 +53,16 @@
                 android:layout_below="@id/tv_about_res"
                 android:text="Cost $300 for one" />
 
-            <ImageView
+            <android.support.v7.widget.AppCompatRatingBar
                 android:id="@+id/iv_ratings"
+                style="@style/Widget.AppCompat.RatingBar.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@id/tv_res_name"
                 android:layout_below="@id/tv_cost"
-                android:layout_marginTop="@dimen/margin_medium_2"
-                android:src="@drawable/ic_star_border_amber_24dp" />
+                android:layout_marginTop="@dimen/margin_large"
+                android:numStars="5"
+                android:rating="3.5" />
 
             <TextView
                 android:layout_width="wrap_content"

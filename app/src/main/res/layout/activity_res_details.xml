@@ -26,109 +26,116 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <RelativeLayout
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <LinearLayout
-            android:id="@+id/ll_title"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="4">
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/tv_food_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_xxlarge"
+                    android:layout_weight="3"
+                    android:text="White sauce pasta With Vegetable"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_regular_3x"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_xxlarge"
+                    android:layout_weight="1"
+                    android:background="@color/primary"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_small"
+                    android:text="$269" />
+
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/tv_food_title"
-                android:layout_width="0dp"
+                android:id="@+id/tv_text_details"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/ll_title"
+                android:layout_marginEnd="@dimen/margin_medium_2"
                 android:layout_marginStart="@dimen/margin_medium_2"
                 android:layout_marginTop="@dimen/margin_xxlarge"
-                android:layout_weight="3"
-                android:text="White sauce pasta With Vegetable"
-                android:textColor="@color/primary_text"
-                android:textSize="@dimen/text_regular_3x"
-                android:textStyle="bold" />
+                android:lineSpacingMultiplier="1.2"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipisciing elit. Etiam id sem risus. Mauris imperdiet varlus eros. Morbi at faucibus dolor, in tristique tortor."
+                android:textSize="@dimen/text_regular" />
 
             <TextView
-                android:layout_width="0dp"
+                android:id="@+id/tv_suggestion"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/tv_text_details"
                 android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_marginStart="@dimen/margin_medium_2"
                 android:layout_marginTop="@dimen/margin_xxlarge"
-                android:layout_weight="1"
-                android:background="@color/primary"
-                android:gravity="center"
-                android:padding="@dimen/margin_small"
-                android:text="$269" />
+                android:text="Add a note (extra sauce, no onions, etc.)"
+                android:textSize="@dimen/text_regular" />
 
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/tv_text_details"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ll_title"
-            android:layout_marginEnd="@dimen/margin_medium_2"
-            android:layout_marginStart="@dimen/margin_medium_2"
-            android:layout_marginTop="@dimen/margin_xxlarge"
-            android:lineSpacingMultiplier="1.2"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipisciing elit. Etiam id sem risus. Mauris imperdiet varlus eros. Morbi at faucibus dolor, in tristique tortor."
-            android:textSize="@dimen/text_regular" />
-
-        <TextView
-            android:id="@+id/tv_suggestion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_text_details"
-            android:layout_marginEnd="@dimen/margin_medium_2"
-            android:layout_marginStart="@dimen/margin_medium_2"
-            android:layout_marginTop="@dimen/margin_xxlarge"
-            android:text="Add a note (extra sauce, no onions, etc.)"
-            android:textSize="@dimen/text_regular" />
-
-        <View
-            android:id="@+id/line"
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:layout_below="@id/tv_suggestion"
-            android:layout_marginEnd="@dimen/margin_medium_2"
-            android:layout_marginStart="@dimen/margin_medium_2"
-            android:layout_marginTop="@dimen/margin_medium_2"
-            android:background="@color/divider" />
+            <View
+                android:id="@+id/line"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@id/tv_suggestion"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:background="@color/divider" />
 
 
-        <LinearLayout
-            android:id="@+id/ll_buttons"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/line"
-            android:layout_marginEnd="@dimen/margin_medium_2"
-            android:layout_marginStart="@dimen/margin_medium_2"
-            android:layout_marginTop="@dimen/margin_medium_2"
-            android:orientation="horizontal"
-            android:weightSum="3">
-
-            <TextView
-                android:layout_width="0dp"
+            <LinearLayout
+                android:id="@+id/ll_buttons"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="- 2 +"
-                android:background="@color/primary"
-                android:padding="@dimen/margin_medium_2"
-                />
+                android:layout_below="@id/line"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:orientation="horizontal"
+                android:weightSum="3">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="ADD To CART"
-                android:background="@color/primary"
-                android:padding="@dimen/margin_medium_2"
-                android:layout_marginStart="@dimen/margin_small"
-                />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/primary"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_medium_2"
+                    android:text="- 2 +" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_weight="2"
+                    android:background="@color/primary"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_medium_2"
+                    android:text="ADD TO CART" />
 
-    </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
 
 </android.support.design.widget.CoordinatorLayout>

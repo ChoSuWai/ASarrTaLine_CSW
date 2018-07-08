@@ -73,6 +73,19 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginEnd="@dimen/margin_medium_3"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:background="@color/search_bar_color"
+        app:layout_anchor="@+id/app_bar"
+        app:layout_anchorGravity="bottom|center"
+        android:padding="@dimen/margin_medium"
+        >
+
+    </SearchView>
+
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
